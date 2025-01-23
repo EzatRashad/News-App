@@ -1,0 +1,23 @@
+{
+  "newsApp": "تطبيق أخبار",
+  "todayNews": "أخبار اليوم",
+  "categories": "الاقسام",
+  "settingsTitle": "الاعدادات",
+  "settingsPage": "الاعدادات",
+  "sports": "رياضة",
+  "general": "عامة",
+  "health": "صحة",
+  "business": "أعمال",
+  "entertainment": "ترفيه",
+  "science": "علوم",
+  "technology": "تكنولوجيا",
+  "search": "لم يتم العثور علي اخبار,جرب بحث أخر",
+  "searchTextField": "ابحث عن مقال",
+  "viewFullArticle": "عرض المقال بالكامل",
+  "light": "فاتح",
+  "dark": "داكن",
+  "arabic": "عربي",
+  "english": "انجليزي",
+  "theme": "السمه",
+  "language": "اللغة"
+}

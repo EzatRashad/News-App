@@ -1,0 +1,23 @@
+{
+  "newsApp":"NEWS-APP",
+  "todayNews": "TODAY-NEWS",
+  "categories":"Categories",
+  "settingsTitle": "SETTINGS",
+  "settingsPage":"SETTINGS",
+  "sports": "SPORTS",
+  "general": "GENERAL",
+  "health": "HEALTH",
+  "business": "BUSINESS",
+  "entertainment": "ENTERTAINMENT",
+  "science": "SCIENCE",
+  "technology": "TECHNOLOGY",
+  "search": "No articles found, Please tey another search term",
+  "searchTextField": "Search Articles",
+  "viewFullArticle": "View Full Article",
+  "light": "Light",
+  "dark": "Dark",
+  "arabic": "Arabic",
+  "english": "English",
+  "theme": "Theme",
+  "language": "Language"
+  }
