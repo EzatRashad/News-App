@@ -4,6 +4,10 @@ import 'package:news_app/features/home/home_cubit/home_cubit.dart';
 import 'package:news_app/features/home/home_cubit/home_states.dart';
 import 'package:news_app/features/home/widgets/shimer_tab_item.dart';
 import 'package:news_app/models/category_model.dart';
+import 'package:news_app/repos/source_repo/data_source/source_remote_data_source_impl.dart';
+import 'package:news_app/repos/source_repo/source_repo.dart';
+import 'package:news_app/repos/source_repo/source_repo_impl.dart';
+import 'package:news_app/services/api_service.dart';
 import 'widgets/tab_widget.dart';
 
 class HomeView extends StatefulWidget {
@@ -14,7 +18,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  HomeCubit homeCubit = HomeCubit();
+  HomeCubit homeCubit = HomeCubit(sourceRepo: SourceRepoImpl(sourceRemoteDataSource: SourceRemoteDataSourceImpl(apiService: ApiService())));
   @override
   void initState() {
     homeCubit.getSources(widget.selectedCategory!.id);

@@ -6,7 +6,7 @@ import 'package:news_app/models/source_model.dart';
 import '../core/constants.dart';
 
 class ApiService {
-  static Future<SourceModel> getSources(String categoryId) async {
+    Future<SourceModel> getSources(String categoryId) async {
     Dio dio = Dio();
     String url = Uri.https(Constants.baseUrl, Constants.sourcesEndPoint, {
       'apiKey': Constants.apiKey,
@@ -30,7 +30,7 @@ class ApiService {
   }
 
 
-  static Future<NewsModel> getNewsBySourceId(String sourceId ) async {
+   Future<NewsModel> getNewsBySourceId(String sourceId ) async {
     Dio dio = Dio();
     String url = Uri.https(Constants.baseUrl, Constants.articlesEndPoint, {
       'apiKey': Constants.apiKey,

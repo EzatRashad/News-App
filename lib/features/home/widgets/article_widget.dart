@@ -5,6 +5,9 @@ import 'package:news_app/features/home/article_cubit/article_cubit.dart';
 import 'package:news_app/features/home/widgets/article_item.dart';
 import 'package:news_app/features/home/widgets/shimer_article_item.dart';
 import 'package:news_app/models/source_model.dart';
+import 'package:news_app/repos/news_repo/data_Sorce/News_remote_data_source.dart';
+import 'package:news_app/repos/news_repo/news_repo_impl.dart';
+import 'package:news_app/services/api_service.dart';
 
 class ArticleWidget extends StatefulWidget {
   const ArticleWidget({super.key, required this.source});
@@ -15,7 +18,10 @@ class ArticleWidget extends StatefulWidget {
 }
 
 class _ArticleWidgetState extends State<ArticleWidget> {
-  ArticleCubit articleCubit = ArticleCubit();
+  ArticleCubit articleCubit = ArticleCubit(
+      newsRepo: NewsRepoImpl(
+          newsRemoteDataSource:
+              NewsRemoteDataSourceImpl(apiService: ApiService())));
   @override
   void initState() {
     articleCubit.getNewsBySourceId(widget.source.id!);
@@ -59,7 +65,5 @@ class _ArticleWidgetState extends State<ArticleWidget> {
       },
       bloc: articleCubit,
     );
-
-    
   }
 }
